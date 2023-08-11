@@ -1,11 +1,11 @@
 import React from "react";
 import StudentCard from "./StudentCard";
 
-function StudentList({ data }) {
+function StudentList({ students }) {
   return (
     <div className="studentList">
-      {data.map((data) => 
-        <StudentCard student={data}/>
+      {students.map((student) => 
+        <StudentCard student={student}/>
       )}
     </div>
   );

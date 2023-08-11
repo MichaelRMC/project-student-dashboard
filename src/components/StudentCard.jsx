@@ -1,14 +1,14 @@
 import React from "react";
-
-const StudentCard = ({data}) => {
+import "../App.css"
+const StudentCard = ({student}) => {
   return (
         <div className="studentCard">
-          <img src={data.profilePhoto} />
-          <h3>
-            {data.names.preferredName} {data.names.surname}
-          </h3>
-          <span>{data.username}</span>
-          <span>{data.dob}</span>
+          <img src={student.profilePhoto} />
+          <h3>{student.names.preferredName} {student.names.surname}</h3>
+          <p>{student.username}</p>
+          <span>Birthday: {student.dob}</span>
+          <br />
+          <button>Show More...</button>
         </div>
         )
 }

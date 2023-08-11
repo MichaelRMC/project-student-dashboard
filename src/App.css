@@ -1,0 +1,37 @@
+.container {
+	display: grid;
+	grid-template-areas: "header header"
+						 "cohortList studentList"
+						 "cohortList studentList";
+}
+
+header {
+	grid-area: header;
+}
+
+header h1 {
+	text-align: center;
+}
+
+.studentList {
+	grid-area: studentList;	
+	display: grid;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.studentCard {
+	display: grid;
+	grid-template-areas: "img h3"
+						 "img p"
+						 "img span";
+	border: .25rem solid steelblue;
+	border-radius: 10px;
+}
+
+.studentCard img {
+	width: 150px;
+	height: 150px;
+	padding: 20px;
+}
+

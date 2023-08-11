@@ -1,14 +1,17 @@
 import React from 'react';
+import students from './data/data.json';
 import StudentList from './components/StudentList'
-import students from './data/data.json' 
+import CohortList from './components/CohortList'
 
-console.log(data);
+console.log(students);
 
 function App() {
   return (
-    <div>
-      <h1>Student Dashboard</h1>
-      <StudentList />
+    <div className="container">
+      <header>
+        <h1>Student Dashboard</h1>
+      </header>
+      <StudentList students={students} />
     </div>
   );
 }
