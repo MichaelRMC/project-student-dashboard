@@ -17,16 +17,14 @@ header h1 {
 	grid-area: studentList;	
 	display: grid;
 	flex-direction: column;
-	gap: 20px;
+	gap: 10px;
 }
 
 .studentCard {
-	display: grid;
-	grid-template-areas: "img h3"
-						 "img p"
-						 "img span";
+	display: inline-grid;
 	border: .25rem solid steelblue;
 	border-radius: 10px;
+	justify-content: center;
 }
 
 .studentCard img {
