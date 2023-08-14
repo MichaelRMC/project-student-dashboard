@@ -4,13 +4,12 @@ import StudentCard from "./StudentCard";
 function StudentList({ students }) {
   return (
     <>
-    <div className="studentList">
-      <h2>All Students</h2>
-      <h3>Total Students:</h3>
-      {students.map((student) => 
-        <StudentCard key={student.id} student={student}/>
-      )}
-    </div>
+      <div className="studentList">
+        <h2>All Students</h2>
+        {students.map((student) => (
+          <StudentCard key={student.id} student={student} />
+        ))}
+      </div>
     </>
   );
 }

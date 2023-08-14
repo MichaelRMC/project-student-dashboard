@@ -1,16 +1,14 @@
 import React from "react";
-import {useState} from 'react';
+import { useState } from "react";
 import students from "./data/data.json";
 import StudentList from "./components/StudentList";
 import SideNavBar from "./components/SideNavBar";
 import "./App.css";
 
-
-
 function App() {
-const [cohortTotal, setCohortTotal] = useState(students.length);
-
-
+  const handleClick = () => {
+    e.preventDefault();
+  };
 
   return (
     <div className="container">
@@ -18,7 +16,7 @@ const [cohortTotal, setCohortTotal] = useState(students.length);
         <h1>Student Dashboard</h1>
       </header>
       <aside>
-      <SideNavBar students={students} />
+        <SideNavBar students={students} />
       </aside>
       <StudentList students={students} />
     </div>
