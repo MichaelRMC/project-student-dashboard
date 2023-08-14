@@ -1,17 +1,16 @@
 import React from "react";
 import {useState} from 'react';
-import "./App.css";
 import students from "./data/data.json";
 import StudentList from "./components/StudentList";
-// import CohortList from "./components/CohortList";
+import SideNavBar from "./components/SideNavBar";
+import "./App.css";
+
+
 
 function App() {
-  const [selected, setSelected] = useState(false);
+const [cohortTotal, setCohortTotal] = useState(students.length);
 
 
-  function handleClick() {
-    setSelected(!selected)
-  }
 
   return (
     <div className="container">
@@ -19,9 +18,7 @@ function App() {
         <h1>Student Dashboard</h1>
       </header>
       <aside>
-        <nav>
-          {/* <CohortList cohorts={students} /> */}
-        </nav>
+      <SideNavBar students={students} />
       </aside>
       <StudentList students={students} />
     </div>

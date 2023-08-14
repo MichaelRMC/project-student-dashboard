@@ -1,17 +1,25 @@
 .container {
 	display: grid;
 	grid-template-areas: "header header"
+						 "header header"
 						 "cohortList studentList"
 						 "cohortList studentList";
 }
 
 header {
 	grid-area: header;
+	background-color: #4951f2;
+	height: 100fr;
+	margin-bottom: 5px;
 }
 
 header h1 {
 	text-align: center;
+	place-items: center;
+	place-content: center;
+	place-self: center;
 }
+
 
 .studentList {
 	grid-area: studentList;	
@@ -20,16 +28,28 @@ header h1 {
 	gap: 10px;
 }
 
-.studentCard {
-	display: inline-grid;
-	border: .25rem solid steelblue;
+.studentCardContainer {
+	display: flex;
+	border: .25em solid steelblue;
 	border-radius: 10px;
-	justify-content: center;
+	justify-items: center;
+	
 }
 
-.studentCard img {
-	width: 150px;
-	height: 150px;
-	padding: 20px;
+.studentCardContainer img {
+	width: 240px;
+	height: 240px;
 }
+
+.studentInfo {
+	display: flex;
+	height: 0;
+	transition: height 0.3s ease;
+	overflow: hidden;
+}
+
+.studentInfo.expanded {
+	height: auto;
+}
+
 
